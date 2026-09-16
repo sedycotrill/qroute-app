@@ -19,14 +19,7 @@ function Create({ goToLogin }: { goToLogin: () => void }) {
         <label>
           <input type="checkbox" /> I agree to the Terms and Conditions
         </label>
-
-        <button type="submit" className="btn-primary">Sign Up</button>
       </form>
-
-      <p className="footer-text">
-        Already have an Account?{" "}
-        <span onClick={goToLogin} className="link">Sign In</span>
-      </p>
     </div>
   );
 }
