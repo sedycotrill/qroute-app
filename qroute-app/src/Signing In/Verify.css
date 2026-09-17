@@ -1,0 +1,162 @@
+/* Container & Border (Pareho sa Login / Create) */
+.page-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Siguraduhing walang border ang outer-border-box O ang form-card */
+.outer-border-box {
+  width: 100%;
+  max-width: 480px;
+  border: 1.5px solid #333333; /* Ito ang nag-iisang outer border */
+  border-radius: 8px;
+  padding: 40px 40px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Card content - tanggalin ang anumang border at background dito */
+.form-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  position: absolute;
+  top: -45px;
+  left: 0;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #333333;
+  margin: 0 0 28px 0;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.form-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Circle OTP Inputs */
+.otp-container {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.otp-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid #757575;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  outline: none;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+  margin-top: 40px;
+}
+
+.otp-circle:focus {
+  border-color: #000000;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Timer and Footer Text */
+.timer-text {
+  font-size: 13px;
+  color: #555555;
+  margin: 0 0 6px 0;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer-text {
+  margin: 0 0 20px 0;
+  font-size: 13px;
+  color: #333333;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.login-link-btn {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 13px;
+  font-weight: normal;
+  color: #000000;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-link-btn:hover {
+  opacity: 0.7;
+}
+
+/* Submit Button */
+.submit-btn {
+  border: 1.5px solid #757575;
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 10px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  cursor: pointer;
+  align-self: center;
+  min-width: 120px;
+  margin-top: 10px;
+  transition: all 0.2s ease-in-out;
+  margin-top: 30px;
+}
+
+.submit-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
