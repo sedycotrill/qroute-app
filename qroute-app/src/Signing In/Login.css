@@ -1,105 +1,228 @@
-.login-container {
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page-frame {
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #ffffff;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Gamitin ito sa Login, Create, at Verify para magkapareho ng lapad */
+.outer-border-box {
+  width: 100%;
+  max-width: 400px; /* Isang standard na sukat para sa lahat */
+  border: 1.5px solid #333333;
+  border-radius: 12px;
+  padding: 32px 28px;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .logo {
-  font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 20px;
+  position: absolute;
+  top: -38px;
+  left: 0;
+  font-size: 24px;
+  font-weight: 900;
+  color: #000000;
 }
 
-.login-box {
-  width: 300px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #fff;
-  text-align: center;
+.form-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.login-box h2 {
-  margin: 0;
+.title {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 4px;
+  color: #000000;
 }
 
-.login-box p {
-  margin: 5px 0 15px;
+.subtitle {
+  font-size: 13px;
+  color: #333333;
+  margin-bottom: 16px;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-label {
-  text-align: left;
-  margin: 5px 0;
-}
-
-input[type="email"],
-input[type="password"] {
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.password-field {
+/* Pill Input Groups */
+.pill-input-group {
+  width: 100%;
+  border: 1.5px solid #757575;
+  border-radius: 20px;
+  padding: 6px 14px;
   display: flex;
   align-items: center;
+  background-color: #ffffff;
+  margin-bottom: 20px;
 }
 
-.password-field input {
-  flex: 1;
+.input-label-bold {
+  font-size: 13px;
+  font-weight: bold;
+  color: #000000;
+  margin-right: 8px;
+  white-space: nowrap;
 }
 
-.password-field .toggle {
-  margin-left: 5px;
+.clean-input {
+  border: none;
+  outline: none;
+  font-size: 13px;
+  color: #333333;
+  width: 100%;
+  background: transparent;
+}
+
+.eye-icon {
+  font-size: 14px;
   cursor: pointer;
+  user-select: none;
+  margin-left: 6px;
 }
 
-.options {
+/* Options Row */
+.options-row {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
-  margin-bottom: 15px;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: -20px;
 }
 
-.signin-btn {
-  background: #6200ee;
-  color: white;
-  padding: 10px;
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #333333;
+}
+
+.forgot-link-btn {
+  background: none;
   border: none;
-  border-radius: 4px;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000000;
+  text-decoration: underline;
   cursor: pointer;
 }
 
-.divider {
-  margin: 10px 0;
-  font-size: 12px;
-  color: #888;
+.forgot-link-btn:hover {
+  opacity: 0.7;
 }
 
+/* Main Login Button */
+.submit-btn {
+  border: 1.5px solid #757575;
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 8px 28px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+  cursor: pointer;
+  margin-top: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.submit-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+/* "or" Divider */
+.divider-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 6px 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: #cccccc;
+}
+
+.divider-text {
+  padding: 0 10px;
+  font-size: 12px;
+  color: #666666;
+}
+
+/* Google Button */
 .google-btn {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
-  border: 1px solid #ccc;
-  padding: 8px;
-  border-radius: 4px;
+  gap: 10px;
+  background-color: #ffffff;
+  border: 1.5px solid #757575;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333333;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.google-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.google-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.login-link-btn {
+  background: transparent !important;
+  border: none;
+  font-size: 12px;
+  font-weight: normal;
+  color: #000000;
+  text-decoration: underline;
   cursor: pointer;
 }
 
-.google-btn img {
-  width: 18px;
-  margin-right: 8px;
-}
+.login-link-btn:hover {
+  opacity: 0.7;
+} 
 
-.signup {
-  margin-top: 15px;
+/* Footer Link */
+.footer-text {
   font-size: 12px;
+  color: #333333; /* Pinalitan mula 12px papuntang 20px (o pataasin pa kung gusto mo) */
 }
