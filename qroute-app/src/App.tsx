@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Login from "./Signing In/Login";
 import Create from "./Signing In/Create";
-import Verify from "./Signing In/Verify";
+import { Verify } from "./Signing In/Verify";
 import Landing from "./Main Page/Landing"; // Dagdagan ng "Main Page/"// 1. Import ang Landing component
 
 function App() {

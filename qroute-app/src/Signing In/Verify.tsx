@@ -1,9 +1,11 @@
 import React, { useState, useRef } from 'react';
 import './Verify.css';
 
-export interface VerifyProps {
+interface VerifyProps {
   onVerify?: (code: string) => void;
   onResend?: () => void;
+  goToLogin?: () => void;
+  goToLanding?: () => void;
 }
 
 export const Verify: React.FC<VerifyProps> = ({ onVerify, onResend }) => {
